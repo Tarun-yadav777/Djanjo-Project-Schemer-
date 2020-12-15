@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style>
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding-top: 2%;
+          }
+
+          .cont{
+            width: 900px;
+            height: 630px;
+            background: #24252A;
+            border-radius: 40px;
+            box-shadow: 0 19px 38px rgba(128, 128, 128, 0.30), 0 15px 12px rgba(128, 128, 128, 0.22);
+          }
+
+          .background {
+            padding-left:20%;
+            align-items: center;
+            display: flex;
+          }
+
+          .button{
+            font-size:30px;
+            width: 240px;
+            padding: 40px;
+            border-radius: 40px;
+          }
+
+          ul{
+            list-style-type: none;
+            padding-left: 280px;
+            padding-top: 50px;
+            font-size:30px;
+          }
+
+          .occupation{
+            padding: 20px;
+            font-size: 30px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+          }
+
+          .phone{
+            padding:20px;
+            font-size: 30px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+          }
+
+          li{
+            padding-bottom:30px;
+          }
+
+          #res{
+            padding-top: 10px;
+          }
+
+	</style>
+    <title></title>
+
+  </head>
+  <body>
+    <div class="background">
+      <div class="cont">
+        <div class="Requirements">
+          <form action="/schemegen/detail" class="" id="occupations"  method="GET">
+            {% csrf_token %}
+          <ul>
+            <li>
+              <label for="Occupation" style="color:white;">योजना श्रेणी:</label><br>
+              <div id="res">
+              <select form="occupations" class="occupation" id='occupation' name="occupation" required>
+                <option value="Women's Development">महिला विकास</option>
+                <option value="Social Justice">सामाजिक न्याय</option>
+                <option value="Sports">खेल</option>
+                <option value="Ruler Development">शासक का विकास</option>
+                <option value="Child Development">बाल विकास</option>
+              </select>
+            </div>
+            </li>
+            <li>
+              <label for="Number" style="color:white;">फोन नंबर:</label>
+              <div id="res">
+              <input type="tel" class="phone"></input>
+            </div>
+            </li>
+            <li><input class="button" type="submit" name="Submit" value="योजना खोजें"></li>
+          </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+c

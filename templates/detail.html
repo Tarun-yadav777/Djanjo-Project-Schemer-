@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <div class="button">
+       <button type="button" onclick="location.href='/'" class="btn btn-dark">Home</button>
+   </div>
+    <table class="table table-bordered table-hover" >
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for scheme in schemes %}
+            <tr>
+                <td scope="row">{{ scheme.id }}</td>
+                <td scope="row"><a target="_blank" href="{{ scheme.info_link }}">{{ scheme.name }}</a></td>
+                <td scope="row">{{ scheme.type }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style>
+              * {
+            box-sizing: border-box;
+            margin: 0;
+            padding-top: 1%;
+          }
+
+          .cont{
+            width: 900px;
+            height: 630px;
+            background: #24252A;
+            border-radius: 40px;
+            box-shadow: 0 19px 38px rgba(128, 128, 128, 0.30), 0 15px 12px rgba(128, 128, 128, 0.22);
+          }
+
+          .background {
+            padding-left:20%;
+            align-items: center;
+            display: flex;
+          }
+
+          img{
+            width:500px;
+          }
+
+          .button{
+            font-size:20px;
+            width: 240px;
+            padding: 40px;
+            border-radius: 40px;
+          }
+
+          ul{
+            list-style-type: none;
+            padding-left: 200px;
+          }
+
+          .scan{
+            padding-left: 130px;
+          }
+                .button2{
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      background-color: #24252A;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      }
+
+	</style>
+    <title></title>
+    
+  </head>
+  <body>
+     <div class="buttonz">
+       <button type="button"  class="button2" onclick="location.href='/schemegen/'" >Back</button>
+   </div>
+    <div class="background">
+      <div class="cont">
+        <div class="Adhaar">
+          <ul>
+            <li><<img src="https://cdn.headlinesoftoday.com/wp-content/uploads/2015/09/aadhar-card.jpg" alt=""></li>
+            <div class="scan">
+              <form class="" action="/schemegen/requirements" method="post">
+                {% csrf_token %}
+                <li><input class="button" type="submit" name="Scan" value="Scan Adhaar Card"></li>
+              </form>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

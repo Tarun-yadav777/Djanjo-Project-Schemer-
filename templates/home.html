@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+      <style>
+          body{
+  margin: 0;
+  padding: 0;
+}
+
+.welcome{
+  border: none;
+  outline: none;
+  background: none;
+  font-family: 'Balsamiq Sans', cursive;
+  color: #fff;
+  width: 100%;
+  height: 762px;
+  font-size: 60px;
+  background-image: radial-gradient(circle at 90% 80%, transparent, #dedede);
+  animation-name: homepage;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes homepage{
+  0%   {background-color: #cc9900;}
+  25%  {background-color: #ff7373;}
+  50%  {background-color: #3333cc;}
+  75%  {background-color: #00ffcc;}
+  100% {background-color: #cc9900;}
+}
+      </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="homepage" action="/schemegen">
+      {% csrf_token %}
+      <input class="welcome" type="submit" name="button" value="Welcome">
+    </form>
+  </body>
+</html>
